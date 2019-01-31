@@ -1,10 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>DELI-VERY</title>
+        <title>The Burger Experts</title>
+        <meta charset="utf-8"/>
     </head>
     <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
+        <main>
+        <h1>The Burger Experts</h1>
+        </main>
+        <section>
+            <h1>Select burger</h1>
+            This is where you select burger<br>
+            <br>                
+            
+                <table>
+                    <thread>
+                        <tr>
+                        <th>The Halloumi Burger</th>
+                        <th>Chicken Burger</th>
+                        <th>Special Burger</th>
+                        </tr>
+                </thread>
+                <tbody>
+                    <tr>
+                        <td><img src="img/burger1.jpg" alt="halloumi" title="mat" width="350"></td>
+                        <td><img src="img/burger2.jpg" alt="" title="mat" width="350"> </td>
+                        <td><img src="img/burger3.jpg" alt="regular" title="mat" width="350"> </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><dl>
+                                <dt>Halloumi, sweet onion</dt>
+                                    <dd>Vegetarian</dd>
+                            </dl></td>
+                                <td><dt>Chicken, cheese</dt>
+                                    <dd>Gluten free bread</dd></td>
+                                <td><dt>Beef, cheese, salad, bean bread</dt>
+                                    <dd>Lactose free</dd>
+                                    </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+            
+
+
+        </section>
+
+        <section>
+                <h4>Customer information</h4>
+                We will send an email of the approximated time of your order to arrive.<br>
+                <br>
+                <h4>Delivery information:</h4>
+                <p>
+                    <form action="">
+                        <label for="Full name">Full name</label><br>
+                        <input type="text" id="Full name" name="fn" required="required" placeholder="First- and Last name">
+                </p>
+                <p>
+                        <label for="E-mail">E-mail</label><br>
+                        <input type="text" id="E-mail" name="em" required="required" placeholder="E-mail">
+                </p>
+                <p>
+                        <label for="Street name">Street</label><br>
+                        <input type="text" id="Street name" name="sn" required="required" placeholder="Street name">
+                </p>
+                <p>
+                        <label for="House number">House</label><br>
+                        <input type="number" id="House number" name="hn" required="required" placeholder="House number" >
+                </p>
+                <p>
+                        <label for="Payment">Payment option</label><br>
+                        <select id="Payment" name="po" selected="selected">
+                            <option selected>Credit card</option>
+                            <option>Card on arrival</option>
+                            <option>Cash on arrival</option>
+                            <option>Check </option>
+                        </select> <br>
+                        <br>
+                    
+                    
+                        <label for="Gender">Gender</label><br>
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <input type="radio" name="gender" value="do not wish to provide"> Do not wish to provide 
+                        <br>
+                        <!--<input type="submit" value="Send">-->
+                      </form>
+                      <button type="submit"><img src="img/send.png"> </button>
+                </p>
+                         
+
+        </section>
+        <footer><hr>
+            &copy; by The Burger Experts 2019
+        </footer>
     </body>
 </html>

@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>The Burger Experts</title>
         <meta charset="utf-8"/>
     </head>
     <body>
-        <main>
-        <h1>The Burger Experts</h1>
+        <main class="top">
+        <h1 class="headtext">The Burger Experts</h1>
+        <img id="backpic" src="img/back.jpg">   
         </main>
-        <section>
+        <section id="burgers">
             <h1>Select burger</h1>
             This is where you select burger<br>
-            <br>                
+            <br>        
             
-                <table>
-                    <thread>
-                        <tr>
-                        <th>The Halloumi Burger</th>
-                        <th>Chicken Burger</th>
-                        <th>Special Burger</th>
-                        </tr>
-                </thread>
-                <tbody>
-                    <tr>
-                        <td><img src="img/burger1.jpg" alt="halloumi" title="mat" width="350"></td>
-                        <td><img src="img/burger2.jpg" alt="" title="mat" width="350"> </td>
-                        <td><img src="img/burger3.jpg" alt="regular" title="mat" width="350"> </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
+            <div class="wrapper">
+                    <div class="box a">The Halloumi Burger <br>
+                        <br>
+                        <img src="img/burger1.jpg" alt="halloumi" title="mat" width="350"> <br>
+                        
                         <td><dl>
-                                <dt>Halloumi, sweet onion</dt>
+                                <dt>Halloumi, sweet onion, salad</dt>
+                                <section class="fooddetalj">
                                     <dd>Vegetarian</dd>
+                                    </section>
                             </dl></td>
-                                <td><dt>Chicken, cheese</dt>
-                                    <dd>Gluten free bread</dd></td>
-                                <td><dt>Beef, cheese, salad, bean bread</dt>
+
+                    </div>
+                    <div class="box b">Chicken burger <br>
+                        <br>
+                        <img src="img/burger2.jpg" alt="" title="mat" width="350"> <br>
+
+                        <td><dl>
+                                <dt>Chicken, cheese, salad</dt>
+                                <section class="fooddetalj">
+                                    <dd>Gluten free</dd>
+                                    </section>
+                            </dl></td>
+                    </div>
+                    <div class="box c">Meat burger <br>
+                        <br>
+                        <img src="img/burger3.jpg" alt="regular" title="mat" width="350"> <br>
+
+                        <td><dl>
+                                <dt>Beef, cheese, salad, bean bread</dt>
+                                <section class="fooddetalj">
                                     <dd>Lactose free</dd>
-                                    </td>
-                    </tr>
-                </tfoot>
-            </table>
+                                    </section>
+                            </dl></td>
+                        </section>
 
-
-            
-
-
-        </section>
-
-        <section>
+        <section id="secnum2">
                 <h4>Customer information</h4>
                 We will send an email of the approximated time of your order to arrive.<br>
                 <br>
@@ -87,9 +89,8 @@
                         <input type="radio" name="gender" value="female"> Female<br>
                         <input type="radio" name="gender" value="do not wish to provide"> Do not wish to provide 
                         <br>
-                        <!--<input type="submit" value="Send">-->
                       </form>
-                      <button type="submit"><img src="img/send.png"> </button>
+                      <button id="submitbutton" type="submit"><img src="img/send.png"> </button>
                 </p>
                          
 

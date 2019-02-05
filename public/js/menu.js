@@ -5,7 +5,7 @@ var food = [
     "name": "Halloumi burger",
     "img": "img/burger1.jpg",
     "desc": "Vegetarian",
-    "containing": "Halloumi, sweet onion", 
+    "containing": "Halloumi, sweet onion, salad", 
     "kCal": 750,
     },
     {
@@ -30,14 +30,14 @@ var food = [
     "kCal": 800,
     },
     {
-    "name": "Vegan burger",
+    "name": "Vegan plate",
     "img": "img/vegan5.jpg",            
     "desc": "Gluten free",
     "containing": "black beans, salad", 
     "kCal": 750,
     },
     {
-    "name": "Halloumi burger",
+    "name": "Texmex burger",
     "img": "img/burger5.jpg",            
     "desc": "Gluten free",
     "containing": "bean-burger, salad", 

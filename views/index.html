@@ -2,6 +2,10 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script src="https://vuejs.org/js/vue.js"></script> 
+        <script src="js/js_script.js" defer></script>
+        <script src="js/vue_script.js" defer></script>
         <title>The Burger Experts</title>
         <meta charset="utf-8"/>
     </head>
@@ -10,47 +14,27 @@
         <h1 class="headtext">The Burger Experts</h1>
         <img id="backpic" src="img/back.jpg">   
         </main>
+
         <section id="burgers">
-            <h1>Select burger</h1>
-            This is where you select burger<br>
+        <div id="BS">
+            <h1>{{SB}}</h1>
+            
+        </div>
             <br>        
             
-            <div class="wrapper">
-                    <div class="box a">The Halloumi Burger <br>
-                        <br>
-                        <img src="img/burger1.jpg" alt="halloumi" title="mat" width="350"> <br>
-                        
-                        <td><dl>
-                                <dt>Halloumi, sweet onion, salad</dt>
-                                <section class="fooddetalj">
-                                    <dd>Vegetarian</dd>
-                                    </section>
-                            </dl></td>
+            <div id="wrapper" class="wrapper">
+                <div v-for="item in burgers">
+                    </dt>{{item.burger}} <br>
+                    <img :src="item.pic" :width="350"> <br>
+                    <td><dl>
+                    {{item.desc}}
+                    <dd>{{item.containing}} <br> {{item.calories}}</dd>
+                    <input type="checkbox" name="burgerCheck" :value="item.burger"> {{item.burger}}<br>
 
-                    </div>
-                    <div class="box b">Chicken burger <br>
-                        <br>
-                        <img src="img/burger2.jpg" alt="" title="mat" width="350"> <br>
-
-                        <td><dl>
-                                <dt>Chicken, cheese, salad</dt>
-                                <section class="fooddetalj">
-                                    <dd>Gluten free</dd>
-                                    </section>
-                            </dl></td>
-                    </div>
-                    <div class="box c">Meat burger <br>
-                        <br>
-                        <img src="img/burger3.jpg" alt="regular" title="mat" width="350"> <br>
-
-                        <td><dl>
-                                <dt>Beef, cheese, salad, bean bread</dt>
-                                <section class="fooddetalj">
-                                    <dd>Lactose free</dd>
-                                    </section>
-                            </dl></td>
+                </dl></td>                    
+                </div>
                         </section>
-
+                    
         <section id="secnum2">
                 <h4>Customer information</h4>
                 We will send an email of the approximated time of your order to arrive.<br>
@@ -83,16 +67,21 @@
                         </select> <br>
                         <br>
                     
-                    
                         <label for="Gender">Gender</label><br>
-                        <input type="radio" name="gender" value="male"> Male<br>
-                        <input type="radio" name="gender" value="female"> Female<br>
-                        <input type="radio" name="gender" value="do not wish to provide"> Do not wish to provide 
+                        <input type="radio" name="gender" value="Male"> Male<br>
+                        <input type="radio" name="gender" value="Female"> Female<br>
+                        <input type="radio" name="gender" value="Do not wish to provide" checked> Do not wish to provide 
+
                         <br>
                       </form>
-                      <button id="submitbutton" type="submit"><img src="img/send.png"> </button>
+                      <div id="answers">
+                      <button id="answers" type="submit" v-on:click="markDone"><img src="img/send.png"> </button>
+                        <div id="answer">
+                            {{output}}
+                        </div>
+                    </div>
                 </p>
-                         
+                
 
         </section>
         <footer><hr>

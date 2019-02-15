@@ -6,6 +6,9 @@
         <script src="https://vuejs.org/js/vue.js"></script> 
         <script src="js/js_script.js" defer></script>
         <script src="js/vue_script.js" defer></script>
+        <script src="/vue/vue.js" defer></script>
+        <script src="/socket.io/socket.io.js" defer></script>
+        <script src="js/deli-very.js" defer></script>
         <title>The Burger Experts</title>
         <meta charset="utf-8"/>
     </head>
@@ -41,21 +44,13 @@
                 <br>
                 <h4>Delivery information:</h4>
                 <p>
-                    <form action="">
+                    <form>
                         <label for="Full name">Full name</label><br>
                         <input type="text" id="Full name" name="fn" required="required" placeholder="First- and Last name">
                 </p>
                 <p>
                         <label for="E-mail">E-mail</label><br>
                         <input type="text" id="E-mail" name="em" required="required" placeholder="E-mail">
-                </p>
-                <p>
-                        <label for="Street name">Street</label><br>
-                        <input type="text" id="Street name" name="sn" required="required" placeholder="Street name">
-                </p>
-                <p>
-                        <label for="House number">House</label><br>
-                        <input type="number" id="House number" name="hn" required="required" placeholder="House number" >
                 </p>
                 <p>
                         <label for="Payment">Payment option</label><br>
@@ -71,17 +66,39 @@
                         <input type="radio" name="gender" value="Male"> Male<br>
                         <input type="radio" name="gender" value="Female"> Female<br>
                         <input type="radio" name="gender" value="Do not wish to provide" checked> Do not wish to provide 
+        
+                        <meta charset="utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>DELI-VERY MAP</title>
+                        <link rel="stylesheet" href="css/deli-very.css">
+                        
+                      </head>
+                      
+                    <div id="mapnsubmit"> 
+                        <h1> Click in the map! </h1>
+                        <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+                        <div class="view-box">
+                          <div id="dots" v-on:click="displayOrder">
+                              <div 
+                                v-for="(order, key) in orders"
+                                v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                                {{"T"}}
+                              </div>
+                          </div>
+                        </div>
 
                         <br>
                       </form>
-                      <div id="answers">
-                      <button id="answers" type="submit" v-on:click="markDone"><img src="img/send.png"> </button>
-                        <div id="answer">
-                            <div v-for="answer in output">
+                    <div>
+                      <button id="answers" type="button" v-on:click="addOrder"><img src="img/send.png"> </button>
+                        <div id="answer"> 
+                        <div v-for="answer in output"> 
                             {{answer}}
                             </div>
                         </div>
                     </div>
+                    </div>
+
                 </p>
                 
 

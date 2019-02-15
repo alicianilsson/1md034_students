@@ -27,7 +27,7 @@ for (i=0;i<6;i++){
 }
 
 function answer() {
-  var aArray=[document.getElementById('Full name').value, document.getElementById('E-mail').value, document.getElementById('Street name').value, document.getElementById('House number').value, document.getElementById('Payment').value, document.querySelector("input[name=gender]:checked").value]
+  var aArray=[document.getElementById('Full name').value, document.getElementById('E-mail').value, document.getElementById('Payment').value, document.querySelector("input[name=gender]:checked").value]
   if(document.querySelector("input[name=burgerCheck]:checked")!=null){
     var temp = document.getElementsByName('burgerCheck');
     for(i=0;i<temp.length;i++) {
@@ -39,7 +39,7 @@ function answer() {
   }
   return aArray;
 }
-
+/*
 var click = new Vue({
   el:'#answers',
   data:{
@@ -51,15 +51,13 @@ var click = new Vue({
     }
   }
 
-})
-
+})*/
 
 var menu = new Vue({
   el: "#wrapper",
   data:{
     burgers: menuArray
   }
-
 })
 
 var BS = new Vue({
@@ -67,5 +65,5 @@ el:"#BS",
 data:{
 SB:"Select a burger"
 }
-
 })
+
